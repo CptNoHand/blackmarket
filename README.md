@@ -1,10 +1,7 @@
-# blackmarket
-(っ◕‿◕)っ Location changing black market script for QBCore.
+## !(っ◕‿◕)っ! Old school moving black market for The QBCore Framework. New and improved. 
 
-### Preview:
+## Requirements 
 
-https://user-images.githubusercontent.com/82594996/138556632-416317c0-2661-4652-a056-3f46f544dd83.mp4
+nh-context - https://github.com/dojwun/nh-context
 
-### Support me here:
-
-<a href="https://www.buymeacoffee.com/ManLikeTJB" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>
+qb-core - https://github.com/qbcore-framework
