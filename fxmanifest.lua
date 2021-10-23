@@ -20,5 +20,5 @@ shared_scripts {
 }
 
 dependency {
-	'nh-context'
+	'zf_context'
 }
