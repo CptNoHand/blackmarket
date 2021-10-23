@@ -84,6 +84,6 @@ Config.Locations = {
 
 --- !(っ◕‿◕)っ Shop Times!
 
-Config.Open = 1
+Config.Open = 12
 
-Config.Close = 12
+Config.Close = 23
