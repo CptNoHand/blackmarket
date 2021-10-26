@@ -4,46 +4,46 @@ Config = {}
 
 Config.Products = {
     ["trojan_usb"] = {
-        price = 2.500000,
+        sell = 2.500000,
     },
     ["security_card_01"] = {
-        price = 5.000000,
+        sell = 5.000000,
     },
     ["security_card_02"] = {
-        price = 5.000000,
+        sell = 5.000000,
     },
     ["drill"] = {
-        price = 10.000000,
+        sell = 10.000000,
     },
     ["heavyarmor"] = {
-        price = 15.000000,
+        sell = 15.000000,
     },
     ["screwdriverset"] = {
-        price = 10.000000,
+        sell = 10.000000,
     },
     ["pistol_suppressor"] = {
-        price = 100.000000,
+        sell = 100.000000,
     },
     ["pistol_extendedclip"] = {
-        price = 100.000000,
+        sell = 100.000000,
     },
     ["pistol_ammo"] = {
-        price = 100.000000,
+        sell = 100.000000,
     },
     ["thermite"] = {
-        price = 10.000000,
+        sell = 10.000000,
     },
     ["advancedlockpick"] = {
-        price = 10.000000,
+        sell = 10.000000,
     },
     ["WEAPON_PISTOL"] = {
-        price = 500.000000,
+        sell = 500.000000,
     },
 }
 
 --- !(っ◕‿◕)っ Location Picker!
 
-local setLocPick = math.random(1, 3)
+local setLocPick = math.random(1, 6)
 
 Config.LocationSets = {
     [1] = {
@@ -63,6 +63,24 @@ Config.LocationSets = {
         ["y"] = -476.27,
         ["z"] = 49.25,
         ["h"] = 132.81,
+    },
+    [4] = {
+        ["x"] = 2806.19,
+        ["y"] = 5978.45,
+        ["z"] = 350.7,
+        ["h"] = 223.05,
+    },
+    [5] = {
+        ["x"] = -687.46,
+        ["y"] = 5759.01,
+        ["z"] = 17.51,
+        ["h"] = 48.54,
+    },
+    [6] = {
+        ["x"] = 515.37,
+        ["y"] = 174.6,
+        ["z"] = 100.68,
+        ["h"] = 22.814,
     },
 } 
 
@@ -84,6 +102,6 @@ Config.Locations = {
 
 --- !(っ◕‿◕)っ Shop Times!
 
-Config.Open = 1
+Config.Open = 8
 
-Config.Close = 12
+Config.Close = 14
