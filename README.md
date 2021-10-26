@@ -11,7 +11,5 @@ https://user-images.githubusercontent.com/82594996/138556632-416317c0-2661-4652-
 
 
 ```
-Credits to the original author for the script.
-
 DO NOT SELL THIS SCRIPT, ITS FREE FOR QBCORE COMMUNITY 
 ```
