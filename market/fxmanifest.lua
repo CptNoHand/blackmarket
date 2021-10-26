@@ -3,7 +3,7 @@ game 'gta5'
 
 author 'ManLikeTJB'
 description 'BlackMarket'
-version '4.0.0'
+version '4.0.1'
 
 
 server_scripts {
