@@ -35,7 +35,7 @@ Citizen.CreateThread(function()
                         DrawText3Ds(loc["x"], loc["y"], loc["z"], '~g~E~w~')
                         if IsControlJustPressed(0, 38) then
                             if GetClockHours() >= Config.Open and GetClockHours() <= Config.Close then
-                                TriggerEvent('market:client:open1page')
+                                TriggerEvent('market:client:Homepage')
                             else
                                 QBCore.Functions.Notify('Come back another time.', 'error', 500)
                             end
@@ -87,8 +87,8 @@ AddEventHandler('market:client:buyItem', function(args)
     end
 end)
 
-RegisterNetEvent('market:client:open1page')
-AddEventHandler('market:client:open1page', function()
+RegisterNetEvent('market:client:buy1page')
+AddEventHandler('market:client:buy1page', function()
     TriggerEvent('nh-context:sendMenu', {
         {
             id = 1,
@@ -159,7 +159,7 @@ AddEventHandler('market:client:open1page', function()
             header = "Next Page",
 			txt = "",
 			params = {
-                event = "market:client:open2page",
+                event = "market:client:buy2page",
 
             }
         },
@@ -195,8 +195,8 @@ AddEventHandler('market:client:buyItem2', function(args)
 end)
 
 
-RegisterNetEvent('market:client:open2page')
-AddEventHandler('market:client:open2page', function()
+RegisterNetEvent('market:client:buy2page')
+AddEventHandler('market:client:buy2page', function()
     TriggerEvent('nh-context:sendMenu', {
         {
             id = 1,
@@ -267,11 +267,19 @@ AddEventHandler('market:client:open2page', function()
             header = "Previous Page",
 			txt = "",
 			params = {
-                event = "market:client:open1page",
+                event = "market:client:buy1page",
             }
         },
         {
             id = 9,
+            header = "Home Page",
+			txt = "Back to main menu",
+			params = {
+                event = "market:client:Homepage",
+            }
+        },
+        {
+            id = 10,
             header = "Cancel",
 			txt = "",
 			params = {
@@ -279,4 +287,107 @@ AddEventHandler('market:client:open2page', function()
             }
         },
     })
+end)
+
+--- !(っ◕‿◕)っ Home Menu! (Only edit if you know what you are doing!)
+
+RegisterNetEvent('market:client:Homepage')
+AddEventHandler('market:client:Homepage', function()
+    TriggerEvent('nh-context:sendMenu', {
+        {
+            id = 1,
+            header = "Assistant",
+            txt = ""
+        },
+        {
+            id = 2,
+            header = "Buy Page",
+			txt = "Purchase Here",
+			params = {
+                event = "market:client:buy1page",
+            }
+        },
+        {
+            id = 3,
+            header = "Sell Page",
+			txt = "Sell Items Here",
+			params = {
+                event = "market:client:SellPage",
+
+            }
+        },
+        {
+            id = 4,
+            header = "Cancel",
+			txt = "",
+			params = {
+                event = ""
+            }
+        },
+    })
+end)
+
+--- !(っ◕‿◕)っ Sell Menu! (Only edit if you know what you are doing!)
+
+RegisterNetEvent('market:client:SellPage')
+AddEventHandler('market:client:SellPage', function()
+    TriggerEvent('nh-context:sendMenu', {
+        {
+            id = 1,
+            header = "Assistant",
+            txt = ""
+        },
+        {
+            id = 2,
+            header = "Get Item List",
+			txt = "Items to collect",
+			params = {
+                event = "market:client:ItemList",
+            }
+        },
+        {
+            id = 3,
+            header = "Sell",
+			txt = "Sell list items",
+			params = {
+                event = "market:client:sellItems",
+
+            }
+        },
+        {
+            id = 4,
+            header = "Home Page",
+			txt = "Back to main menu",
+			params = {
+                event = "market:client:Homepage",
+
+            }
+        },
+        {
+            id = 5,
+            header = "Cancel",
+			txt = "",
+			params = {
+                event = ""
+            }
+        },
+    })
+end)
+
+RegisterNetEvent('market:client:sellItems')
+AddEventHandler('market:client:sellItems', function()
+    TriggerServerEvent('market:server:sellItems')
+end)
+
+--- !(っ◕‿◕)っ Item list email, Will reconfig for a item list within config.lua 
+
+RegisterNetEvent('market:client:ItemList')
+AddEventHandler('market:client:ItemList', function()
+    Citizen.Wait(2000)
+	TriggerServerEvent('qb-phone:server:sendNewMail', {
+	sender = "The Assistant",
+	subject = "Items",
+	message = "So you are intrested in making some money? Alright... Get me Security cards and USB's",
+	})
+	Citizen.Wait(3000)
 end)
