@@ -1,3 +1,5 @@
+## DO NOT UPDATE TO THIS VERSION YET!! STILL WORKING OUT BUGS
+
 ## !(っ◕‿◕)っ! Old school moving black market for The QBCore Framework. New and improved. 
 
 ## Requirements 
