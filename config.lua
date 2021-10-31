@@ -1,5 +1,13 @@
 Config = {}
 
+--- !(っ◕‿◕)っ Sellable Items!
+
+Config.SellableItems = {
+    ["trojan_usb"] = 1.500000,
+    ["security_card_01"] = 1.500000,
+    ["security_card_02"] = 1.500000,
+}
+
 --- !(っ◕‿◕)っ Products!
 
 Config.Products = {

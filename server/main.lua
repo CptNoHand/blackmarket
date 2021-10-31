@@ -1,13 +1,5 @@
 local QBCore = exports['qb-core']:GetCoreObject()
 
---- !(っ◕‿◕)っ Item list for selling
-
-local ItemList = {
-    ["trojan_usb"] = 1.500000,
-    ["security_card_01"] = 1.500000,
-    ["security_card_02"] = 1.500000,
-}
-
 --- !(っ◕‿◕)っ Buy Items! (Only edit if you know what you are doing!)
 
 RegisterNetEvent("market:server:buyItems")
@@ -34,16 +26,16 @@ end)
 
 RegisterServerEvent("market:server:sellItems")
 AddEventHandler("market:server:sellItems", function()
-    local src = source
+    local Player = QBCore.Functions.GetPlayer(source)
     local price = 0
-    local Player = QBCore.Functions.GetPlayer(src)
-    if Player.PlayerData.items ~= nil and next(Player.PlayerData.items) ~= nil then 
-        for k, v in pairs(Player.PlayerData.items) do 
-            if Player.PlayerData.items[k] ~= nil then 
-                if ItemList[Player.PlayerData.items[k].name] ~= nil then 
-                    price = price + (ItemList[Player.PlayerData.items[k].name] * Player.PlayerData.items[k].amount)
-                    Player.Functions.RemoveItem(Player.PlayerData.items[k].name, Player.PlayerData.items[k].amount, k)
-                    TriggerClientEvent('inventory:client:ItemBox', source, QBCore.Shared.Items[Player.PlayerData.items[k].name], "remove")
+
+    if Player.PlayerData.items ~= nil and next(Player.PlayerData.items) ~= nil then
+        for i = 1, #Player.PlayerData.items do
+            if Player.PlayerData.items[i] ~= nil then
+                if Config.SellableItems[Player.PlayerData.items[i].name] ~= nil then 
+                    price = price + (Config.SellableItems[Player.PlayerData.items[i].name] * Player.PlayerData.items[i].amount)
+                    Player.Functions.RemoveItem(Player.PlayerData.items[i].name, Player.PlayerData.items[i].amount)
+                    TriggerClientEvent('inventory:client:ItemBox', source, QBCore.Shared.Items[Player.PlayerData.items[i].name], "remove")
                 end
             end
         end

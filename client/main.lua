@@ -89,86 +89,93 @@ end)
 
 RegisterNetEvent('market:client:buy1page')
 AddEventHandler('market:client:buy1page', function()
-    TriggerEvent('nh-context:sendMenu', {
+    exports['qb-menu']:openMenu({
         {
-            id = 1,
-            header = "Assistant",
-            txt = ""
+	    id = 0,
+            isHeader = true,
+            header = "Blackmarket",
+            txt = "Assistant"
         },
         {
-            id = 2,
+	    id = 1,
             header = "Trojan USB: 2.5 bits",
 			txt = "Purchase",
 			params = {
                 event = "market:client:buyItem",
-                args = '1'
+                args = {
+                    number = 1,            
+                }
             }
         },
         {
-            id = 3,
+	    id = 2,
             header = "Security Card A: 5 bits",
 			txt = "Purchase",
 			params = {
                 event = "market:client:buyItem",
-                args = '2'
-
+                args = {
+                    number = 2,            
+                }
             }
         },
         {
-            id = 4,
+	    id = 3,
             header = "Security Card B: 5 bits",
 			txt = "Purchase",
 			params = {
                 event = "market:client:buyItem",
-                args = '3'
-
+                args = {
+                    number = 3,            
+                }
             }
         },
         {
-            id = 5,
+	    id = 4,
             header = "Drill: 10 bits",
 			txt = "Purchase",
 			params = {
                 event = "market:client:buyItem",
-                args = '4'
-
+                args = {
+                    number = 4,            
+                }
             }
         },
         {
-            id = 6,
+	    id = 5,
             header = "Armor: 15 bit",
 			txt = "Purchase",
 			params = {
                 event = "market:client:buyItem",
-                args = '5'
-
+                args = {
+                    number = 5,            
+                }
             }
         },
         {
-            id = 7,
+	    id = 6,
             header = "Screwdriver Kit: 10 bits",
 			txt = "Purchase",
 			params = {
                 event = "market:client:buyItem",
-                args = '6'
-
+                args = {
+                    number = 6,            
+                }
             }
         },
         {
-            id = 8,
+	    id = 7,
             header = "Next Page",
 			txt = "",
 			params = {
                 event = "market:client:buy2page",
-
             }
         },
         {
-            id = 9,
+	    id = 8,
             header = "Cancel",
 			txt = "",
 			params = {
-                event = ""
+                event = "qb-menu:closeMenu"
             }
         },
     })
@@ -197,81 +204,81 @@ end)
 
 RegisterNetEvent('market:client:buy2page')
 AddEventHandler('market:client:buy2page', function()
-    TriggerEvent('nh-context:sendMenu', {
+    exports['qb-menu']:openMenu({
         {
-            id = 1,
-            header = "Assistant",
-            txt = ""
+	    id = 0,
+            isHeader = true,
+            header = "Blackmarket",
+            txt = "Assistant"
         },
         {
-            id = 2,
+	    id = 1,
             header = "Pistol suppressor: 100 bits",
 			txt = "Purchase",
 			params = {
                 event = "market:client:buyItem2",
-                args = '1'
+                args = {
+                    number = 1,            
+                }
             }
         },
         {
-            id = 3,
+	    id = 2,
             header = "Pistol extendedclip: 100 bits",
 			txt = "Purchase",
 			params = {
                 event = "market:client:buyItem2",
-                args = '2'
-
+                args = {
+                    number = 2,            
+                }
             }
         },
         {
-            id = 4,
+	    id = 3,
             header = "Pistol ammo: 100 bits",
 			txt = "Purchase",
 			params = {
                 event = "market:client:buyItem2",
-                args = '3'
-
+                args = {
+                    number = 3,            
+                }
             }
         },
         {
-            id = 5,
+	    id = 4,
             header = "Thermite: 10 bits",
 			txt = "Purchase",
 			params = {
                 event = "market:client:buyItem2",
-                args = '4'
-
+                args = {
+                    number = 4,            
+                }
             }
         },
         {
-            id = 6,
+	    id = 5,
             header = "Advanced lockpick: 10 bits",
 			txt = "Purchase",
 			params = {
                 event = "market:client:buyItem2",
-                args = '5'
-
+                args = {
+                    number = 5,            
+                }
             }
         },
         {
-            id = 7,
+	    id = 6,
             header = "Pistol: 500 bits",
 			txt = "Purchase",
 			params = {
                 event = "market:client:buyItem2",
-                args = '6'
-
+                args = {
+                    number = 6,            
+                }
             }
         },
         {
-            id = 8,
-            header = "Previous Page",
-			txt = "",
-			params = {
-                event = "market:client:buy1page",
-            }
-        },
-        {
-            id = 9,
+	    id = 7,
             header = "Home Page",
 			txt = "Back to main menu",
 			params = {
@@ -279,11 +286,11 @@ AddEventHandler('market:client:buy2page', function()
             }
         },
         {
-            id = 10,
+	    id = 8,
             header = "Cancel",
 			txt = "",
 			params = {
-                event = ""
+                event = "qb-menu:closeMenu"
             }
         },
     })
@@ -293,14 +300,15 @@ end)
 
 RegisterNetEvent('market:client:Homepage')
 AddEventHandler('market:client:Homepage', function()
-    TriggerEvent('nh-context:sendMenu', {
+    exports['qb-menu']:openMenu({
         {
-            id = 1,
-            header = "Assistant",
-            txt = ""
+	    id = 0,
+            isHeader = true,
+            header = "Blackmarket",
+            txt = "Assistant"
         },
         {
-            id = 2,
+	    id = 1,
             header = "Buy Page",
 			txt = "Purchase Here",
 			params = {
@@ -308,7 +316,7 @@ AddEventHandler('market:client:Homepage', function()
             }
         },
         {
-            id = 3,
+	    id = 2,
             header = "Sell Page",
 			txt = "Sell Items Here",
 			params = {
@@ -317,11 +325,11 @@ AddEventHandler('market:client:Homepage', function()
             }
         },
         {
-            id = 4,
+	    id = 3,
             header = "Cancel",
 			txt = "",
 			params = {
-                event = ""
+                event = "qb-menu:closeMenu"
             }
         },
     })
@@ -331,44 +339,43 @@ end)
 
 RegisterNetEvent('market:client:SellPage')
 AddEventHandler('market:client:SellPage', function()
-    TriggerEvent('nh-context:sendMenu', {
+    exports['qb-menu']:openMenu({
         {
-            id = 1,
-            header = "Assistant",
-            txt = ""
+	id = 0,
+        isHeader = true,
+        header = "Blackmarket",
+        txt = "Assistant"
         },
         {
-            id = 2,
-            header = "Get Item List",
-			txt = "Items to collect",
-			params = {
-                event = "market:client:ItemList",
+	id = 1,
+        header = "Get Item List",
+	txt = "Items to collect",
+	params = {
+        event = "market:client:ItemList",
             }
         },
         {
-            id = 3,
-            header = "Sell",
-			txt = "Sell list items",
-			params = {
-                event = "market:client:sellItems",
-
+	id = 2,
+        header = "Sell",
+	txt = "Sell list items",
+	params = {
+        event = "market:client:sellItems",
             }
         },
         {
-            id = 4,
-            header = "Home Page",
-			txt = "Back to main menu",
-			params = {
-                event = "market:client:Homepage",
-
+	id = 3,
+        header = "Home Page",
+	txt = "Back to main menu",
+	params = {
+        event = "market:client:Homepage",
             }
         },
         {
-            id = 5,
-            header = "Cancel",
-			txt = "",
-			params = {
-                event = ""
+	id = 4,
+        header = "Cancel",
+	txt = "",
+	params = {
+        event = "qb-menu:closeMenu"
             }
         },
     })
@@ -380,14 +387,13 @@ AddEventHandler('market:client:sellItems', function()
 end)
 
 --- !(っ◕‿◕)っ Item list email, Will reconfig for a item list within config.lua 
-
 RegisterNetEvent('market:client:ItemList')
 AddEventHandler('market:client:ItemList', function()
     Citizen.Wait(2000)
 	TriggerServerEvent('qb-phone:server:sendNewMail', {
 	sender = "The Assistant",
 	subject = "Items",
-	message = "So you are intrested in making some money? Alright... Get me Security cards and USB's",
+	message = "So you are intrested in making some money? Alright... Get me: Secruity cards and Trojan!!"
 	})
 	Citizen.Wait(3000)
 end)

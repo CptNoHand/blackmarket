@@ -3,7 +3,7 @@ game 'gta5'
 
 author 'ManLikeTJB'
 description 'BlackMarket'
-version '4.0.1'
+version '5.0.0'
 
 
 server_scripts {
@@ -20,5 +20,5 @@ shared_scripts {
 }
 
 dependency {
-	'nh-context'
+	'qb-menu'
 }
