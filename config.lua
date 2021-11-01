@@ -39,7 +39,8 @@ Config.Products = {
 
 --- Location Picker
 
-local setLocPick = 1
+--- local setLocPick = math.random(1, 6) -- un-comment me out for location change
+local setLocPick = 1 -- comment me out for location change
 
 Config.LocationSets = {
     [1] = {
