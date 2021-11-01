@@ -11,7 +11,7 @@ AddEventHandler('market:server:BuyItems', function(products)
     if moneyPlayer > data.sell then
         Player.Functions.RemoveMoney('crypto', tonumber(data.sell), 'black-market')
         if Player.Functions.GetItemByName(products) then
----         TriggerClientEvent('QBCore:Notify', source, products.." has been brought!", 'success')
+                TriggerClientEvent('QBCore:Notify', source, products.." has been brought!", 'success')
         else
             Player.Functions.AddItem(products, 1, false)
             TriggerClientEvent('QBCore:Notify', source, " You Spent " ..data.sell.. " Bits ", 'success')
