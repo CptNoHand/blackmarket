@@ -20,6 +20,9 @@ Config.Products = {
     ["security_card_02"] = {
         sell = 5.000000,
     },
+    ["labkey"] = {
+        sell = 7.5000000,
+    },
     ["heavyarmor"] = {
         sell = 15.000000,
     },
@@ -32,15 +35,12 @@ Config.Products = {
     ["pistol_ammo"] = {
         sell = 100.000000,
     },
-    ["WEAPON_PISTOL"] = {
-        sell = 500.000000,
-    },
 }
 
 --- Location Picker
 
---- local setLocPick = math.random(1, 6) -- un-comment me out for location change
-local setLocPick = 1 -- comment me out for location change
+local setLocPick = math.random(1, 6) -- un-comment me out for location change
+--- local setLocPick = 1 -- comment me out for location change
 
 Config.LocationSets = {
     [1] = {
@@ -99,6 +99,6 @@ Config.Locations = {
 
 --- Shop Times
 
-Config.Open = 8
+Config.Open = 18
 
-Config.Close = 14
+Config.Close = 24
