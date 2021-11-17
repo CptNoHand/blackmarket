@@ -1,31 +1,30 @@
 local QBCore = exports['qb-core']:GetCoreObject()
 
---- !(っ◕‿◕)っ Buy Items! (Only edit if you know what you are doing!)
+--- Buying Items!
 
-RegisterNetEvent("market:server:buyItems")
-AddEventHandler("market:server:buyItems", function(products)
+RegisterNetEvent('market:server:BuyItems')
+AddEventHandler('market:server:BuyItems', function(products)
     local src = source
     local data = Config.Products[products]
     local Player = QBCore.Functions.GetPlayer(source)
     local moneyPlayer = tonumber(Player.PlayerData.money.crypto)
     if moneyPlayer > data.sell then
-        Player.Functions.RemoveMoney("crypto", tonumber(data.sell), "black-market")
+        Player.Functions.RemoveMoney('crypto', tonumber(data.sell), 'black-market')
         if Player.Functions.GetItemByName(products) then
-            TriggerClientEvent('QBCore:Notify', source, products.." has been brought!", "success")
+            TriggerClientEvent('QBCore:Notify', source, products.." has been brought!", 'success')
         else
             Player.Functions.AddItem(products, 1, false)
-            TriggerClientEvent('inventory:client:ItemBox', src, QBCore.Shared.Items[products], "add", 1) 
-            TriggerClientEvent('QBCore:Notify', source, " You Spent " ..data.sell.. " Bits  ", "success")
+            TriggerClientEvent('QBCore:Notify', source, " You Spent " ..data.sell.. " Bits ", 'success')
         end
     else
-        TriggerClientEvent('QBCore:Notify', source, "You don't have enough Crypto!", "error")
+        TriggerClientEvent('QBCore:Notify', source, "You don't have enough Crypto!", 'error')
     end
 end)
 
---- !(っ◕‿◕)っ Selling Items! (Only edit if you know what you are doing!)
+--- Selling Items
 
-RegisterServerEvent("market:server:sellItems")
-AddEventHandler("market:server:sellItems", function()
+RegisterServerEvent('market:server:SellItems')
+AddEventHandler('market:server:SellItems', function()
     local Player = QBCore.Functions.GetPlayer(source)
     local price = 0
 
@@ -36,10 +35,10 @@ AddEventHandler("market:server:sellItems", function()
                     price = price + (Config.SellableItems[Player.PlayerData.items[i].name] * Player.PlayerData.items[i].amount)
                     Player.Functions.RemoveItem(Player.PlayerData.items[i].name, Player.PlayerData.items[i].amount)
                     TriggerClientEvent('inventory:client:ItemBox', source, QBCore.Shared.Items[Player.PlayerData.items[i].name], "remove")
+                    Player.Functions.AddMoney("crypto", price, "sold pawnable items")
+                    TriggerClientEvent('QBCore:Notify', source, " You Got " ..price.. " ", 'success')
                 end
             end
         end
-        Player.Functions.AddMoney("crypto", price, "sold pawnable items")
-        TriggerClientEvent('QBCore:Notify', src, "You have sold your items")
     end
 end)

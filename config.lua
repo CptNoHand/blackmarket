@@ -1,6 +1,6 @@
 Config = {}
 
---- !(っ◕‿◕)っ Sellable Items!
+--- Sellable Items
 
 Config.SellableItems = {
     ["trojan_usb"] = 1.500000,
@@ -8,7 +8,7 @@ Config.SellableItems = {
     ["security_card_02"] = 1.500000,
 }
 
---- !(っ◕‿◕)っ Products!
+--- Products
 
 Config.Products = {
     ["trojan_usb"] = {
@@ -20,14 +20,8 @@ Config.Products = {
     ["security_card_02"] = {
         sell = 5.000000,
     },
-    ["drill"] = {
-        sell = 10.000000,
-    },
     ["heavyarmor"] = {
         sell = 15.000000,
-    },
-    ["screwdriverset"] = {
-        sell = 10.000000,
     },
     ["pistol_suppressor"] = {
         sell = 100.000000,
@@ -38,20 +32,15 @@ Config.Products = {
     ["pistol_ammo"] = {
         sell = 100.000000,
     },
-    ["thermite"] = {
-        sell = 10.000000,
-    },
-    ["advancedlockpick"] = {
-        sell = 10.000000,
-    },
     ["WEAPON_PISTOL"] = {
         sell = 500.000000,
     },
 }
 
---- !(っ◕‿◕)っ Location Picker!
+--- Location Picker
 
-local setLocPick = math.random(1, 6)
+--- local setLocPick = math.random(1, 6) -- un-comment me out for location change
+local setLocPick = 1 -- comment me out for location change
 
 Config.LocationSets = {
     [1] = {
@@ -108,7 +97,7 @@ Config.Locations = {
     },
 }
 
---- !(っ◕‿◕)っ Shop Times!
+--- Shop Times
 
 Config.Open = 8
 

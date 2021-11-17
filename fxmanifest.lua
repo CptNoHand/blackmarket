@@ -15,10 +15,6 @@ client_scripts {
 }
 
 shared_scripts { 
-	'@qb-core/import.lua',
-	'config.lua'
-}
-
-dependency {
-	'qb-menu'
+	"qb-core/import.lua",
+	"config.lua"
 }
