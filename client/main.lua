@@ -64,8 +64,7 @@ end
 
 -- Home menu
 
-RegisterNetEvent('market:client:HomeMenu')
-AddEventHandler('market:client:HomeMenu', function()
+RegisterNetEvent('market:client:HomeMenu', function()
     exports['qb-menu']:openMenu({
         {
             header = "Assistant",
@@ -187,8 +186,7 @@ end)
 
 -- Buying function
 
-RegisterNetEvent('market:client:BuyItems')
-AddEventHandler('market:client:BuyItems', function(args)
+RegisterNetEvent('market:client:BuyItems', function(args)
     local args = tonumber(args)
     if args == 1 then 
         TriggerServerEvent('market:server:BuyItems', 'trojan_usb')
@@ -238,8 +236,7 @@ end)
 
 -- Selling function
 
-RegisterNetEvent("market:client:SellItems")
-AddEventHandler("market:client:SellItems", function()
+RegisterNetEvent("market:client:SellItems", function()
     TaskStartScenarioInPlace(PlayerPedId(), "WORLD_HUMAN_STAND_IMPATIENT", 0, true)
     QBCore.Functions.Progressbar("sell_items", "Checking items of value", 3000, false, true, {}, {}, {}, {}, function() -- Done
         ClearPedTasks(PlayerPedId())
