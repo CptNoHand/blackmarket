@@ -131,7 +131,7 @@ AddEventHandler('market:client:BuyMenu', function()
             }
         },
         {
-            header = "Armor: 15 bit",
+            header = "Armor: 15 bits",
 			txt = "Purchase",
 			params = {
                 event = 'market:client:BuyItems',
@@ -166,7 +166,7 @@ AddEventHandler('market:client:BuyMenu', function()
             }
         },
         {
-            header = "Pistol: 500 bits",
+            header = "Lab Key: 7.5 bits",
 			txt = "Purchase",
 			params = {
                 event = 'market:client:BuyItems',
@@ -203,7 +203,7 @@ RegisterNetEvent('market:client:BuyItems', function(args)
     elseif args == 7 then 
         TriggerServerEvent('market:server:BuyItems', 'pistol_ammo')
     elseif args == 8 then 
-        TriggerServerEvent('market:server:BuyItems', 'WEAPON_PISTOL')
+        TriggerServerEvent('market:server:BuyItems', 'labkey')
     end
 end)
 
