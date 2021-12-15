@@ -23,11 +23,11 @@ Config.Products = {
     ["labkey"] = {
         sell = 7.5000000,
     },
+    ["decryptionkey3"] = {
+        sell = 7.5000000,
+    },
     ["heavyarmor"] = {
         sell = 15.000000,
-    },
-    ["pistol_suppressor"] = {
-        sell = 100.000000,
     },
     ["pistol_extendedclip"] = {
         sell = 100.000000,
