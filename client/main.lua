@@ -105,7 +105,7 @@ AddEventHandler('market:client:BuyMenu', function()
             isMenuHeader = true
         },
         {
-            header = "Trojan USB: 2.5 bits",
+            header = "Trojan USB: 1.0 bits",
 			txt = "Purchase",
 			params = {
                 event = 'market:client:BuyItems',
@@ -113,7 +113,7 @@ AddEventHandler('market:client:BuyMenu', function()
             }
         },
         {
-            header = "Security Card A: 5 bits",
+            header = "Security Card A: 2 bits",
 			txt = "Purchase",
 			params = {
                 event = 'market:client:BuyItems',
@@ -122,7 +122,7 @@ AddEventHandler('market:client:BuyMenu', function()
             }
         },
         {
-            header = "Security Card B: 5 bits",
+            header = "Security Card B: 2 bits",
 			txt = "Purchase",
 			params = {
                 event = 'market:client:BuyItems',
@@ -131,7 +131,7 @@ AddEventHandler('market:client:BuyMenu', function()
             }
         },
         {
-            header = "Armor: 15 bits",
+            header = "Armor: 4 bits",
 			txt = "Purchase",
 			params = {
                 event = 'market:client:BuyItems',
@@ -140,7 +140,7 @@ AddEventHandler('market:client:BuyMenu', function()
             }
         },
         {
-            header = "Decryption Key: 7.5 bits",
+            header = "Decryption Key: 3 bits",
 			txt = "Purchase",
 			params = {
                 event = 'market:client:BuyItems',
@@ -148,7 +148,7 @@ AddEventHandler('market:client:BuyMenu', function()
             }
         },
         {
-            header = "Pistol extendedclip: 100 bits",
+            header = "Pistol extendedclip: 7.5 bits",
 			txt = "Purchase",
 			params = {
                 event = 'market:client:BuyItems',
@@ -157,7 +157,7 @@ AddEventHandler('market:client:BuyMenu', function()
             }
         },
         {
-            header = "Pistol ammo: 100 bits",
+            header = "Pistol ammo: 7.5 bits",
 			txt = "Purchase",
 			params = {
                 event = 'market:client:BuyItems',
@@ -166,7 +166,7 @@ AddEventHandler('market:client:BuyMenu', function()
             }
         },
         {
-            header = "Lab Key: 7.5 bits",
+            header = "Lab Key: 4 bits",
 			txt = "Purchase",
 			params = {
                 event = 'market:client:BuyItems',

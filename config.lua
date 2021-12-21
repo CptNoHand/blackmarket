@@ -12,28 +12,28 @@ Config.SellableItems = {
 
 Config.Products = {
     ["trojan_usb"] = {
-        sell = 2.500000,
+        sell = 1.000000,
     },
     ["security_card_01"] = {
-        sell = 5.000000,
+        sell = 2.000000,
     },
     ["security_card_02"] = {
-        sell = 5.000000,
+        sell = 2.000000,
     },
     ["labkey"] = {
-        sell = 7.5000000,
+        sell = 4.0000000,
     },
     ["decryptionkey3"] = {
-        sell = 7.5000000,
+        sell = 3.0000000,
     },
     ["heavyarmor"] = {
-        sell = 15.000000,
+        sell = 4.000000,
     },
     ["pistol_extendedclip"] = {
-        sell = 100.000000,
+        sell = 7.5000000,
     },
     ["pistol_ammo"] = {
-        sell = 100.000000,
+        sell = 7.500000,
     },
 }
 
