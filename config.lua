@@ -29,7 +29,7 @@ Config.Products = {
     ["heavyarmor"] = {
         sell = 4.000000,
     },
-    ["pistol_extendedclip"] = {
+    ["methlap"] = {
         sell = 7.5000000,
     },
     ["pistol_ammo"] = {

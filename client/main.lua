@@ -148,7 +148,7 @@ AddEventHandler('market:client:BuyMenu', function()
             }
         },
         {
-            header = "Pistol extendedclip: 7.5 bits",
+            header = "Meth Lab: 7.5 bits",
 			txt = "Purchase",
 			params = {
                 event = 'market:client:BuyItems',
@@ -199,7 +199,7 @@ RegisterNetEvent('market:client:BuyItems', function(args)
     elseif args == 5 then 
         TriggerServerEvent('market:server:BuyItems', 'decryptionkey3')
     elseif args == 6 then 
-        TriggerServerEvent('market:server:BuyItems', 'pistol_extendedclip')
+        TriggerServerEvent('market:server:BuyItems', 'methlab')
     elseif args == 7 then 
         TriggerServerEvent('market:server:BuyItems', 'pistol_ammo')
     elseif args == 8 then 
